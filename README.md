@@ -10,7 +10,20 @@ wrapping is not (yet?) supported.
 
 ## Examples
 
-_to be completed_
+Basic use:
+```
+vpype text "Hello world!" show
+```
+
+Control position and alignment:
+```
+vpype text --position 0 0 "Hello world" text --position 0 1cm --align right "dlrow olleH" text --position 0 2cm --align center "Hello olleH" show
+```
+
+Change text font and size:
+```
+vpype text "Default font and size" text -p 0 1cm --font gothiceng -s 12px "Custom font and size" show
+```
 
 
 ## Installation
