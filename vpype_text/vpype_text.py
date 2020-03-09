@@ -1,10 +1,8 @@
 import logging
 
-import click
-from vpype.model import LineCollection
-from vpype.decorators import generator
-from vpype.utils import Length
 import axi
+import click
+from vpype import LineCollection, generator, Length
 
 FONTS = {
     "astrology": axi.hershey_fonts.ASTROLOGY,
@@ -79,7 +77,7 @@ def vpype_text(string, font, size, position, align):
         lc.append([x + 1j * y for x, y in line])
 
     # by default, axi's font appear to be approx 18px size
-    scale_factor = size / 18.
+    scale_factor = size / 18.0
     lc.scale(scale_factor, scale_factor)
 
     min_x, _, max_x, _ = lc.bounds()
