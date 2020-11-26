@@ -2,7 +2,7 @@ import logging
 
 import axi
 import click
-from vpype import LineCollection, generator, Length
+import vpype as vp
 
 FONTS = {
     "astrology": axi.hershey_fonts.ASTROLOGY,
@@ -45,12 +45,12 @@ FONTS = {
 @click.option(
     "-f", "--font", type=click.Choice(FONTS.keys()), default="futural", help="Font to use."
 )
-@click.option("-s", "--size", type=Length(), default=18, help="Text size (default: 18).")
+@click.option("-s", "--size", type=vp.LengthType(), default=18, help="Text size (default: 18).")
 @click.option(
     "-p",
     "--position",
     nargs=2,
-    type=Length(),
+    type=vp.LengthType(),
     default=[0, 0],
     help="Position of the text (default: 0, 0).",
 )
@@ -61,7 +61,7 @@ FONTS = {
     default="left",
     help="Text alignment with respect to position (default: left).",
 )
-@generator
+@vp.generator
 def vpype_text(string, font, size, position, align):
     """
     Generate text using a Hershey font.
@@ -69,10 +69,10 @@ def vpype_text(string, font, size, position, align):
 
     # skip if text is empty
     if string.strip() == "":
-        return LineCollection()
+        return vp.LineCollection()
 
     lines = axi.text(string, font=FONTS[font])
-    lc = LineCollection()
+    lc = vp.LineCollection()
     for line in lines:
         lc.append([x + 1j * y for x, y in line])
 
