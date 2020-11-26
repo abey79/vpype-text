@@ -16,7 +16,7 @@ setup(
     author="Antoine Beyeler",
     url="",
     license=license,
-    packages=find_packages(exclude=("examples", "tests")),
+    packages=["vpype_text"],
     install_requires=[
         'click',
         'vpype @ git+https://github.com/abey79/vpype.git',
