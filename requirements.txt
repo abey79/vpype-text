@@ -1,6 +1,6 @@
 # base
 click
-git+https://github.com/abey79/vpype#egg=vpype
+vpype
 git+https://github.com/fogleman/axi#egg=axi
 
 # dev/test

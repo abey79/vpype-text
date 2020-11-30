@@ -19,7 +19,7 @@ setup(
     packages=["vpype_text"],
     install_requires=[
         'click',
-        'vpype @ git+https://github.com/abey79/vpype.git',
+        'vpype',
         'axi @ git+https://github.com/fogleman/axi',
     ],
     entry_points='''
