@@ -1,5 +1,9 @@
 # vpype-text
 
+**IMPORTANT NOTE**: the functionality of this plug-in as been integrated (and expended upon) in [vpype](https://github.com/abey79/vpype). This plug-in should no longer be used, and uninstalled if present. This repository is now archived.
+
+---
+
 Plug-in for [vpype](https://github.com/abey79/vpype) to generate text with stroke fonts (a.k.a.
 [Hershey fonts](https://en.wikipedia.org/wiki/Hershey_fonts)). This plug-in is implemented as a thin wrapper on
 Michael Fogleman's [axi](https://github.com/fogleman/axi) project.
